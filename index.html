@@ -1,0 +1,251 @@
+<!--
+    This project page is mainly referenced from https://imagen.research.google/editor/.
+    Thanks to the authors for their great work.
+-->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <title>ByteEdit</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="block">
+      </div>
+      <!-- <div class="image-block">
+        <img class="image" src="gif/out0.gif">
+        <img class="image" src="gif/out1.gif">
+        <img class="image" src="gif/out2.gif">
+        <img class="image" src="gif/out3.gif">
+        <img class="image" src="gif/out4.gif">
+      </div> -->
+      <div class="block center">
+        <p class="title">ByteEdit</p>
+        <p class="subtitle">Boost, Comply and Accelerate Generative Image Editing</p>
+      </div>
+      <div class="image-block">
+        <img class="image" src="gif/0.gif">
+        <img class="image" src="gif/1.gif">
+        <img class="image" src="gif/2.gif">
+        <img class="image" src="gif/3.gif">
+        <img class="image" src="gif/4.gif">
+      </div>
+      <div class="block">
+        <p class="section-title">Abstract</p>
+        <p class="paragraph">Recent advancements in diffusion-based generative image editing have sparked a profound revolution,
+            reshaping the landscape of image outpainting and inpainting tasks. Despite these strides, the field grapples with inherent challenges,
+            including: i) inferior quality; ii) poor consistency; iii) insufficient instrcution adherence; iv) suboptimal generation efficiency.
+            To address these obstacles, we present <i><b>ByteEdit</b></i>, an innovative feedback learning framework meticulously designed
+            to <b>B</b>oost, Compl<b>y</b>, and Accelera<b>te</b> Generative Image <b>Edit</b>ing tasks.
+            ByteEdit seamlessly integrates image reward models dedicated to enhancing aesthetics and image-text alignment, while also introducing a
+            dense, pixel-level reward model tailored to foster coherence in the output. Furthermore, we propose a pioneering adversarial and progressive
+            feedback learning strategy to expedite the model's inference speed. Through extensive large-scale user evaluations, we demonstrate that
+            ByteEdit surpasses leading generative image editing products, including Adobe, Canva, and MeiTu, in both generation quality and consistency.
+            ByteEdit-Outpainting exhibits a remarkable enhancement of <b>388%</b> and <b>135%</b> in quality and consistency, respectively,
+            when compared to the baseline model. Experiments also verfied that our acceleration models maintains excellent performance results
+            in terms of quality and consistency.</p>
+        <div class="button-container">
+          <a href="" target="_blank">
+            <div class="button">
+              Research Paper
+            </div>
+          </a>
+          <!-- <a href="https://storage.cloud.google.com/editbench/editbench.tar.gz">
+            <div class="button">
+              <span class="material-symbols-outlined">download</span>EditBench (379 MB)
+            </div>
+          </a> -->
+        </div>
+      </div>
+      <div class="block">
+        <p class="section-title">Examples</p>
+        <!-- <p class="paragraph">The input to Imagen Editor is a masked image and a text prompt, the output is an image with the unmasked areas <i>untouched</i> and the masked areas <i>filled-in</i>. The edits are faithful to input text prompts, while
+          consistent with input images:</p> -->
+        <!-- <div id="edit-examples">
+        </div> -->
+        <div class="video-container">
+            <video src="video/sora-1.mp4" controls autoplay></video>
+        </div>
+      </div>
+      <div class="block">
+        <p class="section-title" style="margin-top: 60px;">Pipeline</p>
+        <p class="paragraph">
+            ByteEdit formulates a comprehensive feedback learning framework that facilitating aesthetics, image-text matching, consistency and inference speed.
+        </p>
+        <img class="image" width="100%" src="images/pipeline.png">
+      </div>
+      <div class="block">
+        <p class="section-title">Authors</p>
+        <p class="paragraph">
+            Yuxi Ren<sup>*</sup>,
+            Jie Wu<sup>*†</sup>,
+            Yanzuo Lu<sup>*</sup>,
+            Huafeng Kuang,
+            Xin Xia,
+            Xionghui Wang,
+            Qianqian Wang,
+            Yixing Zhu,
+            Pan Xie,
+            Shiyin Wang,
+            Xuefeng Xiao,
+            Yitong Wang,
+            Min Zheng,
+            Lean Fu
+            <!-- <a href="https://research.google/people/107321/" target="_blank">Su Wang</a><sup>*</sup>,
+            <a href="https://chitwansaharia.github.io/" target="_blank">Chitwan Saharia<sup>*</sup>,
+            <a href="https://www.linkedin.com/in/cesleedineen" target="_blank">Ceslee Montgomery<sup>*</sup></a>,
+            <a href="https://jponttuset.cat" target="_blank">Jordi Pont-Tuset</a>,
+            <a href="https://il.linkedin.com/in/shai-noy-a8363b135" target="_blank">Shai Noy</a>,
+            <a href="https://ch.linkedin.com/in/stefano-pellegrini-86654b63" target="_blank">Stefano Pellegrini</a>,
+            <a href="https://www.cs.utexas.edu/~yasumasa/" target="_blank">Yasumasa Onoe</a>,
+            <a href="https://www.linkedin.com/in/sarah-laszlo-284886114/" target="_blank">Sarah Laszlo</a>,
+            <a href="https://www.cs.toronto.edu/~fleet/" target="_blank">David J. Fleet</a>,
+            <a href="http://www.radusoricut.com" target="_blank">Radu Soricut</a>,
+            <a href="http://www.jasonbaldridge.com/" target="_blank">Jason Baldridge</a>,
+            <a href="https://norouzi.github.io/" target="_blank">Mohammad Norouzi</a><sup>†</sup>,
+            <a href="https://panderson.me/" target="_blank">Peter Anderson</a><sup>†</sup>,
+            <a href="http://williamchan.ca/" target="_blank">William Chan</a><sup>†</sup> -->
+        </p>
+        <!-- <p class="paragraph">
+            ByteDance Inc.
+        </p> -->
+        <p class="paragraph">
+          <i><sup>*</sup>Equal contribution. <sup>†</sup>Corresponding author.</i>
+        </p>
+        <!-- <p class="section-title" style="margin-top: 60px;">Special Thanks</p>
+        <p class="paragraph">
+          We would like to thank Gunjan Baid, Nicole Brichtova, Sara Mahdavi, Kathy Meier-Hellstern, Zarana Parekh, Anusha Ramesh, Tris Warkentin, Austin Waters, Vijay Vasudevan for their generous help through the course of the project. We thank Irina Blok for creating some of the examples displayed in this website. We give thanks to Igor Karpov, Isabel Kraus-Liang, Raghava Ram Pamidigantam, Mahesh Maddinala, and all the anonymous human annotators for assisting us to coordinate and complete the human evaluation tasks. We are grateful to Huiwen Chang, Austin Tarango, Douglas Eck for reviewing the paper and providing feedback. Thanks to Erica Moreira and Victor Gomes for help with resource coordination. Finally, we would like to give our thanks and appreciation to the authors of DALL-E 2 for their permission for us to use the outputs from their model for research purposes.
+        </p> -->
+      </div>
+    </div>
+  </body>
+  <!-- <script type="text/javascript">
+
+    const shortSwitchTime = 2000;
+    const longSwitchTime = 6000;
+    const imageIds = ["deer", "duck"];
+    const images = {
+      "deer":
+         {
+           id: "deer",
+           src: "images/deer_original.png",
+           currentlySelected: 0,
+           nextSwitch: undefined,
+           prompts: [
+             "A bouquet of red flowers",
+             "Two trees",
+             'A sign that says "Imagen Editor"',
+             "A bush with green leaves",
+             "A bush without leaves",
+           ],
+           targets: [
+             "images/deer_1.jpg",
+             "images/deer_2.jpg",
+             "images/deer_3.jpg",
+             "images/deer_4.jpg",
+             "images/deer_5.jpg",
+           ]
+         },
+       "duck":
+         {
+           id: "duck",
+           src: "images/duck_original.png",
+           currentlySelected: 0,
+           nextSwitch: undefined,
+           prompts: [
+             "A line drawing of an octopus",
+             "A line drawing of an alligator",
+             "A line drawing of a dinosaur",
+             "A line drawing of a lizard",
+             "A line drawing of a horse",
+             "A line drawing of a person",
+             "A line drawing of a person",
+           ],
+           targets: [
+             "images/duck_5.jpg",
+             "images/duck_1.jpg",
+             "images/duck_2.jpg",
+             "images/duck_3.jpg",
+             "images/duck_4.jpg",
+             "images/duck_6.jpg",
+             "images/duck_7.jpg"
+           ]
+         },
+      }
+
+    function switchImage(id, i){
+      document.getElementById(`${id}-target-image`).src = images[id].targets[i];
+      document.getElementById(`${id}-prompt-${images[id].currentlySelected}`).classList.remove('selected');
+      document.getElementById(`${id}-prompt-${i}`).classList.add('selected');
+      images[id].currentlySelected = i;
+    }
+
+    function newEditingBlock(imageId) {
+      const editingBlock = document.createElement('div');
+      editingBlock.classList.add('editing-block');
+
+      const srcImage = document.createElement('img');
+      srcImage.classList.add('image');
+      srcImage.src = images[imageId].src;
+      editingBlock.appendChild(srcImage);
+
+      const prompts = document.createElement('div');
+      prompts.classList.add('prompts');
+
+      for (let i=0; i<images[imageId]["prompts"].length; ++i) {
+        const prompt = document.createElement('p');
+        prompt.innerText = images[imageId]["prompts"][i];
+        prompt.classList.add('prompt');
+        prompt.id = `${imageId}-prompt-${i}`;
+        if (i == images[imageId].currentlySelected) {
+          prompt.classList.add('selected');
+        }
+        prompt.onclick = () => {
+          switchImage(imageId, i);
+          images[imageId].nextSwitch = Date.now() + longSwitchTime;
+        };
+        prompts.appendChild(prompt);
+      }
+
+      editingBlock.appendChild(prompts);
+
+      const targetImage = document.createElement('img');
+      targetImage.classList.add('image');
+      targetImage.id = `${imageId}-target-image`;
+      targetImage.src = images[imageId].targets[0];
+      editingBlock.appendChild(targetImage);
+
+      document.getElementById('edit-examples').appendChild(editingBlock);
+      images[imageId].nextSwitch = Date.now() + shortSwitchTime;
+    }
+
+    function loopThroughPrompts(imageId) {
+      function moveToNextImage(imageId){
+        const position = images[imageId].currentlySelected;
+        const nextPosition = (position == images[imageId].prompts.length - 1) ? 0 : position + 1;
+        switchImage(imageId, nextPosition);
+      }
+
+      if (Date.now() > images[imageId].nextSwitch) {
+        images[imageId].nextSwitch = Date.now() + shortSwitchTime;
+        moveToNextImage(imageId);
+        loopThroughPrompts(imageId);
+      } else {
+        setTimeout(() => {
+          loopThroughPrompts(imageId)
+        }, 50);
+      }
+    }
+
+    for (imageId of imageIds) {
+      newEditingBlock(imageId);
+      loopThroughPrompts(imageId);
+    }
+  </script> -->
+</html>
+
+
