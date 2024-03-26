@@ -23,7 +23,7 @@ body{
 }
 
 .block{
-  margin: 40px 0;
+  margin: 30px 0;
   width: min(900px, calc(100% - 60px));
 }
 
@@ -44,12 +44,12 @@ body{
 }
 
 .editing-block > .image{
-  width: 30%;
+  width: 35%;
   height: 100%;
 }
 
 .editing-block > .prompts{
-  width: 40%;
+  width: 30%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -102,6 +102,7 @@ body{
 
 b {
   color: rgb(66, 133, 244);
+  /* color: rgb(32, 33, 36); */
 }
 
 .button {
@@ -129,7 +130,7 @@ b {
 
 a {
   text-decoration: none;
-  color: rgb(32, 33, 36);
+  color: rgb(66, 133, 244);
 }
 
 sup {
@@ -150,4 +151,8 @@ sup {
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+c {
+    color: rgb(32, 33, 36);
 }
