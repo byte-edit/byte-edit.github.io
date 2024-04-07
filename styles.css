@@ -156,3 +156,36 @@ sup {
 c {
     color: rgb(32, 33, 36);
 }
+
+/* style.css */
+.gif-viewer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#gif-display-in, #gif-display-out {
+    max-width: 900px; /* Adjust as needed */
+    margin: 10px;
+}
+
+#left-button-in, #right-button-in, #left-button-out, #right-button-out {
+    background-color: #f0f0f0; /* 按钮背景色 */
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%; /* 使按钮边缘变圆 */
+    width: 50px; /* 设置按钮宽度 */
+    height: 50px; /* 设置按钮高度 */
+    min-width: 50px; /* 设置最小宽度 */
+    min-height: 50px; /* 设置最小高度 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1; /* 调整行高以帮助文本居中 */
+    margin: 0 10px; /* 为了与图像保持一定的距离 */
+}
+
+#left-button-in:hover, #right-button-in:hover, #left-button-out:hover, #right-button-out:hover {
+    opacity: 0.5; /* 鼠标悬停时的透明度 */
+}
